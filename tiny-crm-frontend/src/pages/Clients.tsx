@@ -47,8 +47,10 @@ function Clients() {
         {clients.map(client => (
           <li key={client.id} className="bg-white p-4 shadow rounded">
             <div>
-              <p><strong>Name:</strong> {client.name}</p>
-              <p><strong>Email:</strong> {client.email}</p>
+        <p><strong>Name:</strong> {client.name}</p>
+        <p><strong>Email:</strong> {client.email}</p>
+        <p><strong>Phone:</strong> {client.phone || '-'}</p>
+        <p><strong>Address:</strong> {client.address || '-'}</p>
               <p><strong>Created At:</strong> {new Date(client.created_at).toLocaleString()}</p>
             </div>
             <button  onClick={() => handleDelete(client.id)}

@@ -5,17 +5,21 @@ from typing import Optional
 
 #Client models
 class ClientCreate(BaseModel):
-    name: str
-    email: EmailStr
-    phone: Optional[str] = None
+    first_name: str
+    last_name: str
+    middle_name: Optional[str] = None
+    phone: str
+    email: Optional[EmailStr] = None
     address: Optional[str] = None
     
 
 class ClientRead(BaseModel):
     id:int
-    name: str
-    email: EmailStr
-    phone: Optional[str] = None
+    first_name: str
+    last_name: str
+    middle_name: Optional[str] = None
+    phone: str
+    email: Optional[EmailStr] = None
     address: Optional[str] = None
     created_at: datetime
     is_active: bool = True
